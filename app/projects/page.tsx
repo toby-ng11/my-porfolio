@@ -7,13 +7,13 @@ const projects = [
     {
         title: 'Project to Quote System',
         description: 'Internal web app to manage opportunities, projects, and quotes. Migrated from jQuery to React + Laravel with Inertia.',
-        image: '/images/p2q.png', // add file vào public/images/
+        image: '/images/projects/p2q/p2q-1.png', // add file vào public/images/
         tech: ['Laravel', 'React', 'SQL Server', 'Inertia'],
         link: 'https://github.com/yourusername/p2q', // hoặc demo URL
     },
 ];
 
-export default function ProjectsPage() {
+export default function Page() {
     return (
         <main className="mx-auto max-w-5xl px-6 py-12">
             <h1 className="mb-8 text-center text-4xl font-bold">Projects</h1>
