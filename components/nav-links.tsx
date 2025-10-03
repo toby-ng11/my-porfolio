@@ -31,7 +31,7 @@ export function NavLinks() {
     return (
         <div className="flex flex-row items-center gap-6">
             <DropdownMenu>
-                <DropdownMenuTrigger>
+                <DropdownMenuTrigger asChild>
                     <Button type="button" size="icon" variant="ghost" className="sm:hidden" title="Open menu">
                         <Menu />
                     </Button>
@@ -50,7 +50,7 @@ export function NavLinks() {
             {navButtons.map((navButton) => (
                 <div
                     key={navButton.label}
-                    className="hover:bg-accent hover:text-accent-foreground hidden items-center justify-center rounded-md p-2 sm:inline-flex"
+                    className="hover:bg-accent hover:text-accent-foreground hidden items-center justify-center rounded-md px-4 py-1.5 sm:inline-flex"
                 >
                     <Link href={navButton.link} className={cn('font-medium', { 'font-bold': pathname === navButton.link })}>
                         {navButton.label}
