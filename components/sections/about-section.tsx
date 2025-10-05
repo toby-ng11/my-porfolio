@@ -1,6 +1,6 @@
-import * as motion from 'motion/react-client';
 import GlassCard from '@/components/glass-card';
 import { fadeUp } from '@/lib/animation';
+import * as motion from 'motion/react-client';
 
 export default function AboutSection() {
     return (

@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { fadeIn, fadeUp } from '@/lib/animation';
+import ProfileImage from '@/public/my-picture.jpeg';
 import * as motion from 'motion/react-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
-import ProfileImage from '@/public/my-picture.jpeg';
 
 export default function HeroSection() {
     return (
@@ -17,16 +17,16 @@ export default function HeroSection() {
             className="relative mx-auto grid grid-cols-1 items-center gap-8 px-4 pt-20 lg:grid-cols-2 lg:gap-12"
         >
             <div className="flex flex-col justify-center space-y-8">
-                <motion.h1 variants={fadeUp} className="text-center text-5xl leading-tight font-bold tracking-tight md:text-left md:text-6xl">
+                <motion.h1 variants={fadeUp} className="text-center text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-left">
                     Hi, I&apos;m <span className="text-lime-600">Toby Nguyen</span>
                 </motion.h1>
 
-                <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl text-center text-lg md:text-left md:text-xl">
+                <motion.p variants={fadeUp} className="text-muted-foreground mx-auto max-w-2xl text-center text-lg md:text-xl lg:text-left">
                     A <span className="text-foreground font-semibold">Software Engineer</span> with 3 years of experience building scalable systems,
                     modern web apps, and smooth user experiences using <span className="font-semibold text-lime-600">Laravel + React</span>.
                 </motion.p>
 
-                <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4 md:justify-start">
+                <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4 lg:justify-start">
                     <Button asChild className="rounded-2xl px-6 py-5 text-base font-semibold">
                         <Link href="/contact">Contact Me</Link>
                     </Button>
