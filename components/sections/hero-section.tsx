@@ -17,7 +17,10 @@ export default function HeroSection() {
             className="relative mx-auto grid grid-cols-1 items-center gap-8 px-4 pt-20 lg:grid-cols-2 lg:gap-12"
         >
             <div className="flex flex-col justify-center space-y-8">
-                <motion.h1 variants={fadeUp} className="text-center text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-left">
+                <motion.h1
+                    variants={fadeUp}
+                    className="text-center text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-left"
+                >
                     Hi, I&apos;m <span className="text-lime-600">Toby Nguyen</span>
                 </motion.h1>
 
