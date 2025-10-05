@@ -9,54 +9,68 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 export function NavLinks() {
     const pathname = usePathname();
+
     const navButtons = [
         {
-            link: '/',
-            label: 'Home',
-        },
-        {
-            link: '/about',
+            link: '#about',
             label: 'About',
         },
         {
-            link: '/projects',
-            label: 'Works',
+            link: '#projects',
+            label: 'Projects',
         },
         {
-            link: '/contact',
+            link: '#experience',
+            label: 'Experience',
+        },
+        {
+            link: '#contact',
             label: 'Contact',
         },
     ];
 
     return (
-        <div className="flex flex-row items-center gap-6">
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button type="button" size="icon" variant="ghost" className="sm:hidden" title="Open menu">
-                        <Menu />
-                    </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                    {navButtons.map((navButton) => (
-                        <DropdownMenuItem key={navButton.label}>
-                            <Link href={navButton.link} className={cn('font-medium', { 'font-bold': pathname === navButton.link })}>
-                                {navButton.label}
-                            </Link>
-                        </DropdownMenuItem>
-                    ))}
-                </DropdownMenuContent>
-            </DropdownMenu>
+        <nav className="bg-background/70 border-border/40 fixed top-0 z-50 w-full border-b backdrop-blur-lg">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+                {/* Logo or name */}
+                <Link href="#hero" className="text-xl font-semibold tracking-tight transition-colors hover:text-lime-500">
+                    Toby Nguyen
+                </Link>
 
-            {navButtons.map((navButton) => (
-                <div
-                    key={navButton.label}
-                    className="hover:bg-accent hover:text-accent-foreground hidden items-center justify-center rounded-md px-4 py-1.5 sm:inline-flex"
-                >
-                    <Link href={navButton.link} className={cn('font-medium', { 'font-bold': pathname === navButton.link })}>
-                        {navButton.label}
-                    </Link>
+                {/* Mobile Dropdown */}
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button type="button" size="icon" variant="ghost" className="sm:hidden" title="Open menu">
+                            <Menu />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="bg-background/95 backdrop-blur-md">
+                        {navButtons.map((navButton) => (
+                            <DropdownMenuItem key={navButton.label} asChild>
+                                <Link href={navButton.link} className="w-full font-medium transition-colors hover:text-lime-500">
+                                    {navButton.label}
+                                </Link>
+                            </DropdownMenuItem>
+                        ))}
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* Desktop Links */}
+                <div className="hidden items-center gap-8 sm:flex">
+                    {navButtons.map((navButton) => (
+                        <Link
+                            key={navButton.label}
+                            href={navButton.link}
+                            className={cn(
+                                'text-sm font-medium transition-colors hover:text-lime-500',
+                                pathname === navButton.link ? 'font-semibold text-lime-500' : 'text-foreground/80',
+                            )}
+                        >
+                            {navButton.label}
+                        </Link>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </div>
+        </nav>
     );
 }

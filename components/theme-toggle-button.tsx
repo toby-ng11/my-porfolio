@@ -24,7 +24,7 @@ export function ThemeToggle() {
     return (
         <div className="fixed right-4 bottom-4 z-50">
             <div className="relative">
-                <DropdownMenu>
+                <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-all hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"

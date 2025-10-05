@@ -1,3 +1,4 @@
+import { Background } from '@/components/background';
 import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle-button';
@@ -30,7 +31,7 @@ export default function RootLayout({
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                     <Header />
-                    {children}
+                    <Background>{children}</Background>
                     <ThemeToggle />
                 </ThemeProvider>
             </body>
