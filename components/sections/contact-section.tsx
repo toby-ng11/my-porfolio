@@ -1,4 +1,5 @@
 import GlassCard from '@/components/glass-card';
+import SectionTitle from '@/components/section-title';
 import { Button } from '@/components/ui/button';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
@@ -14,7 +15,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             variants={fadeUp}
         >
-            <h2 className="text-4xl font-semibold lg:text-5xl">Get In Touch</h2>
+            <SectionTitle>Get In Touch</SectionTitle>
             <GlassCard>
                 <p className="text-muted-foreground text-lg">
                     I&apos;m always open to discussing new opportunities, collaborations, or side projects.

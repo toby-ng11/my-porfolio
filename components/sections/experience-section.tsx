@@ -1,4 +1,5 @@
 import GlassCard from '@/components/glass-card';
+import SectionTitle from '@/components/section-title';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
 
@@ -12,7 +13,7 @@ export function ExperienceSection() {
             viewport={{ once: true }}
             variants={fadeUp}
         >
-            <h2 className="text-center text-4xl font-semibold lg:text-5xl">Experience</h2>
+            <SectionTitle>Experience</SectionTitle>
             <GlassCard>
                 <div className="mx-auto flex max-w-3xl flex-col gap-6">
                     {[

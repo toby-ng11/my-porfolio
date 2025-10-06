@@ -6,7 +6,7 @@ import ProjectSection from '@/components/sections/project-section';
 
 export default function Page() {
     return (
-        <main className="font-sans mx-auto max-w-6xl space-y-40 p-4">
+        <main className="font-sans mx-auto max-w-7xl space-y-40 p-4">
             <HeroSection />
             <AboutSection />
             <ProjectSection />

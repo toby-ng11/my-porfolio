@@ -38,7 +38,7 @@ export function Header() {
                 </Link>
 
                 {/* Mobile Dropdown */}
-                <DropdownMenu>
+                <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                         <Button type="button" size="icon" variant="ghost" className="sm:hidden" title="Open menu">
                             <Menu />

@@ -5,7 +5,7 @@ export default function GlassCard({ children, className }: { children: ReactNode
     return (
         <div
             className={cn(
-                'bg-background/50 relative mx-auto rounded-3xl border border-lime-500/10 p-10 shadow-lg backdrop-blur-md transition hover:border-lime-500/20',
+                'bg-background/50 relative mx-auto overflow-hidden rounded-3xl border border-lime-500/10 p-10 shadow-lg backdrop-blur-md transition hover:border-lime-500/20',
                 className,
             )}
         >

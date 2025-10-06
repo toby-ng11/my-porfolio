@@ -1,4 +1,5 @@
 import GlassCard from '@/components/glass-card';
+import SectionTitle from '@/components/section-title';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
 import Link from 'next/link';
@@ -13,7 +14,9 @@ export default function ProjectSection() {
             viewport={{ once: true }}
             variants={fadeUp}
         >
-            <h2 className="text-center text-4xl font-semibold lg:text-5xl">Projects</h2>
+            <SectionTitle>
+                My <span className="text-lime-700 dark:text-lime-500">Projects</span>
+            </SectionTitle>
             <GlassCard>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {[
