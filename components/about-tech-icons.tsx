@@ -42,27 +42,29 @@ export default function TechIcons() {
                         initial={{ opacity: 0, y: 20, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                        transition={{ duration: 0.6, ease: 'easeInOut' }}
+                        transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.25 }}
                     >
                         <current.Icon className="size-16 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.8)]" />
                     </motion.a>
                 </AnimatePresence>
             </div>
 
-            <motion.p
-                key={current.name + '-label'}
-                className="text-lg font-medium text-lime-700 dark:text-lime-500"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{
-                    duration: 0.4,
-                    ease: 'easeInOut',
-                    delay: 0.75,
-                }}
-            >
-                {current.name}
-            </motion.p>
+            <AnimatePresence mode="wait">
+                <motion.p
+                    key={current.name + '-label'}
+                    className="text-lg font-medium text-lime-700 dark:text-lime-500"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{
+                        duration: 0.4,
+                        ease: 'easeInOut',
+                        delay: 0.5,
+                    }}
+                >
+                    {current.name}
+                </motion.p>
+            </AnimatePresence>
         </div>
     );
 }
