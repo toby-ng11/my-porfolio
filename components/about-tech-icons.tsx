@@ -31,7 +31,7 @@ export default function TechStackCard() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -5 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="absolute left-1/2 w-full -translate-x-1/2 text-center text-3xl font-medium text-lime-700 dark:text-lime-400"
+                        className="absolute left-1/2 w-full -translate-x-1/2 text-center text-3xl font-medium"
                     >
                         {hovered || 'Skills & Tech Stack'}
                     </motion.p>
@@ -46,7 +46,7 @@ export default function TechStackCard() {
                         target="_blank"
                         title={name}
                         rel="noopener noreferrer"
-                        className="group bg-muted/20 flex size-20 items-center justify-center rounded-md border border-lime-700/30 text-lime-700 duration-300 ease-out hover:border-lime-500/60 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] dark:text-lime-400"
+                        className="group bg-muted/20 flex size-20 items-center justify-center rounded-md border border-lime-700/30 text-lime-700 duration-300 ease-out hover:border-lime-600/60 hover:text-lime-600 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] dark:text-lime-400 dark:hover:border-lime-700/60"
                         onHoverStart={() => setHovered(name)}
                         onHoverEnd={() => setHovered(null)}
                         whileTap={{ scale: 0.95 }}

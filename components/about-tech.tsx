@@ -30,7 +30,7 @@ export default function AboutCard() {
 
     return (
         <GlassCard className="flex min-h-[250px] w-full items-center justify-center p-14">
-            <p className="text-muted-foreground mx-auto text-2xl md:text-3xl">
+            <p className="mx-auto text-2xl md:text-3xl">
                 Tech enthusiast with a passion for{' '}
                 <span className="font-mono font-semibold text-lime-700 dark:text-lime-400">
                     {text}

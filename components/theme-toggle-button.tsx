@@ -27,7 +27,7 @@ export function ThemeToggle() {
                 <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-all hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                            className="group bg-muted/20 flex h-12 w-12 hover:bg-lime-400/20 dark:hover:bg-lime-300/20 items-center justify-center rounded-full border border-lime-700/30 text-lime-700 shadow-lg backdrop-blur-md ease-out hover:border-lime-600/60 hover:text-lime-600 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] dark:border-lime-700/30 dark:text-lime-400 dark:hover:border-lime-700/60"
                             aria-label="Toggle theme selector"
                             variant="outline"
                             size="icon"

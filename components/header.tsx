@@ -30,7 +30,7 @@ export function Header() {
     ];
 
     return (
-        <nav className="bg-background/70 border-border/40 fixed top-0 z-50 w-full border-b backdrop-blur-lg">
+        <nav className="bg-background/70 border-border/40 fixed top-0 z-50 w-full border-b backdrop-blur-md">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
                 {/* Logo or name */}
                 <Link href="#hero" className="text-xl font-semibold tracking-tight transition-colors hover:text-lime-500">
