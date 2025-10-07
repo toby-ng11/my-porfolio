@@ -14,9 +14,7 @@ export default function ProjectSection() {
             viewport={{ once: true }}
             variants={fadeUp}
         >
-            <SectionTitle>
-                My <span className="text-lime-700 dark:text-lime-500">Projects</span>
-            </SectionTitle>
+            <SectionTitle>My Projects</SectionTitle>
             <GlassCard>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {[

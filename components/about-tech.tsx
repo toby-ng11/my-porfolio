@@ -32,7 +32,7 @@ export default function AboutCard() {
         <GlassCard className="flex min-h-[250px] w-full items-center justify-center p-14">
             <p className="text-muted-foreground mx-auto text-2xl md:text-3xl">
                 Tech enthusiast with a passion for{' '}
-                <span className="font-mono font-semibold text-lime-600 dark:text-lime-400">
+                <span className="font-mono font-semibold text-lime-700 dark:text-lime-400">
                     {text}
                     <span className="animate-pulse">|</span>
                 </span>

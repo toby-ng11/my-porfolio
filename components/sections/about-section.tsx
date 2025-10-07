@@ -17,7 +17,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             variants={fadeUp}
         >
-            <SectionTitle className="bg-linear-to-r from-emerald-700 to-lime-700 bg-clip-text text-transparent dark:from-emerald-500 dark:to-yellow-500">
+            <SectionTitle>
                 About Me
             </SectionTitle>
 
