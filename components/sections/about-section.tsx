@@ -5,6 +5,7 @@ import SectionTitle from '@/components/section-title';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
 import BackendFrontendShowcase from '../about-showcase';
+import AboutCard from '../about-tech';
 import TechIcons from '../about-tech-icons';
 
 export default function AboutSection() {
@@ -21,28 +22,17 @@ export default function AboutSection() {
                 About Me
             </SectionTitle>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-                <GlassCard>
-                    <p className="text-muted-foreground mx-auto mt-6 max-w-3xl text-center text-lg">
-                        Tech enthusiast with a passion for clean architecture, automation, and modern web development.
-                    </p>
-                </GlassCard>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-6">
+                <AboutCard />
 
-                <BackendFrontendShowcase />
-            </div>
+                <BackendFrontendShowcase className="row-span-2" />
 
-            <SectionTitle className="bg-linear-to-r from-emerald-700 to-lime-700 bg-clip-text text-transparent dark:from-emerald-500 dark:to-yellow-500">
-                Skills & Tech Stack
-            </SectionTitle>
-
-            <GlassCard>
-                <div className="flex flex-col items-center space-y-2">
+                <GlassCard className="w-full space-y-4">
+                    <p className="text-center text-3xl font-medium text-lime-600 dark:text-lime-400">Skills & Tech Stack</p>
                     <TechIcons />
-                    <p className="text-muted-foreground mx-auto mt-6 max-w-3xl text-center text-lg">
-                        and still learning more...
-                    </p>
-                </div>
-            </GlassCard>
+                    <p className="text-muted-foreground mx-auto max-w-3xl text-center text-lg">and still learning more...</p>
+                </GlassCard>
+            </div>
         </motion.section>
     );
 }

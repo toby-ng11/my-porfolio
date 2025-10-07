@@ -5,13 +5,14 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import php from 'highlight.js/lib/languages/php';
 
 import GlassCard from '@/components/glass-card';
+import { cn } from '@/lib/utils';
 import { ArrowDown } from 'lucide-react';
 import { SiJavascript, SiPhp } from 'react-icons/si';
 
 hljs.registerLanguage('php', php);
 hljs.registerLanguage('javascript', javascript);
 
-export default function BackendFrontendShowcase() {
+export default function BackendFrontendShowcase({ className }: { className?: string }) {
     const backendCode = hljs.highlight(
         `<?php
 class QuoteController {
@@ -33,7 +34,7 @@ class QuoteController {
     ).value;
 
     return (
-        <GlassCard className="flex flex-col items-center justify-center space-y-6 text-center">
+        <GlassCard className={cn('flex flex-col items-center justify-center space-y-6 text-center', className)}>
             <div className="bg-background/40 w-full max-w-lg overflow-hidden rounded-2xl border border-lime-500/20 backdrop-blur-md">
                 {/* Header bar */}
                 <div className="flex items-center justify-between border-b border-lime-500/20 bg-lime-500/10 px-3 py-1.5">

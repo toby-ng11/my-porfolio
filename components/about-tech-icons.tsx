@@ -1,6 +1,7 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
+import * as motion from 'motion/react-client';
 import { useEffect, useState } from 'react';
 import { BsMicrosoft } from 'react-icons/bs';
 import { SiGithub, SiInertia, SiLaravel, SiReact, SiShadcnui, SiTailwindcss, SiTypescript } from 'react-icons/si';
@@ -19,7 +20,6 @@ const techStack = [
 export default function TechIcons() {
     const [index, setIndex] = useState(0);
 
-    // cycle every 2.5s
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % techStack.length);
@@ -31,40 +31,24 @@ export default function TechIcons() {
 
     return (
         <div className="flex flex-col items-center justify-center gap-4">
-            <div className="relative h-32 w-32">
-                <AnimatePresence mode="wait">
+            <div className="relative size-36 md:size-40">
+                <AnimatePresence mode="popLayout">
                     <motion.a
                         key={current.name}
                         href={current.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group bg-muted/20 absolute inset-0 flex items-center justify-center rounded-2xl border border-lime-700/30 text-lime-700 transition-all duration-300 hover:border-lime-500/60 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] dark:text-lime-500"
-                        initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                        transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.25 }}
+                        className="group absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-2xl border border-lime-700/30 bg-lime-500/10 p-4 text-lime-700 duration-300 hover:border-lime-500/60 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] dark:text-lime-500"
+                        initial={{ x: -100, opacity: 0, scale: 0.9 }}
+                        animate={{ x: 0, opacity: 1, scale: 1 }}
+                        exit={{ x: 200, opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.6, ease: 'easeInOut' }}
                     >
-                        <current.Icon className="size-16 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.8)]" />
+                        <current.Icon className="size-12 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.8)] md:size-16" />
+                        {current.name}
                     </motion.a>
                 </AnimatePresence>
             </div>
-
-            <AnimatePresence mode="wait">
-                <motion.p
-                    key={current.name + '-label'}
-                    className="text-lg font-medium text-lime-700 dark:text-lime-500"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{
-                        duration: 0.4,
-                        ease: 'easeInOut',
-                        delay: 0.5,
-                    }}
-                >
-                    {current.name}
-                </motion.p>
-            </AnimatePresence>
         </div>
     );
 }
