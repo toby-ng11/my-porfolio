@@ -1,12 +1,11 @@
 'use client';
 
-import GlassCard from '@/components/glass-card';
 import SectionTitle from '@/components/section-title';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
 import BackendFrontendShowcase from '../about-showcase';
 import AboutCard from '../about-tech';
-import TechIcons from '../about-tech-icons';
+import TechStackCard from '../about-tech-icons';
 
 export default function AboutSection() {
     return (
@@ -24,14 +23,8 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-6">
                 <AboutCard />
-
                 <BackendFrontendShowcase className="row-span-2" />
-
-                <GlassCard className="w-full space-y-4">
-                    <p className="text-center text-3xl font-medium text-lime-600 dark:text-lime-400">Skills & Tech Stack</p>
-                    <TechIcons />
-                    <p className="text-muted-foreground mx-auto max-w-3xl text-center text-lg">and still learning more...</p>
-                </GlassCard>
+                <TechStackCard />
             </div>
         </motion.section>
     );

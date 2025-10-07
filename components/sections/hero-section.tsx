@@ -18,7 +18,11 @@ export default function HeroSection() {
         >
             <div className="flex flex-col justify-center space-y-8">
                 <motion.h1 variants={fadeUp} className="text-center text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-left">
-                    Hi, I&apos;m <span className="text-lime-700 dark:text-lime-500">Toby Nguyen</span>
+                    Hi! I&apos;m{' '}
+                    <span className="bg-linear-to-r from-emerald-700 to-lime-700 bg-clip-text text-transparent dark:from-emerald-500 dark:to-lime-500">
+                        Toby Nguyen
+                    </span>
+                    .
                 </motion.h1>
 
                 <motion.p variants={fadeUp} className="text-muted-foreground mx-auto max-w-2xl text-center text-lg md:text-xl lg:text-left">
