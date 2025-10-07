@@ -4,9 +4,8 @@ import GlassCard from '@/components/glass-card';
 import SectionTitle from '@/components/section-title';
 import { fadeUp } from '@/lib/animation';
 import * as motion from 'motion/react-client';
-import { BsMicrosoft } from 'react-icons/bs';
-import { SiGithub, SiInertia, SiLaravel, SiReact, SiShadcnui, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import BackendFrontendShowcase from '../about-showcase';
+import TechIcons from '../about-tech-icons';
 
 export default function AboutSection() {
     return (
@@ -37,30 +36,11 @@ export default function AboutSection() {
             </SectionTitle>
 
             <GlassCard>
-                <div className="flex flex-wrap justify-center gap-8">
-                    {[
-                        { name: 'React', Icon: SiReact, href: 'https://react.dev/' },
-                        { name: 'Laravel', Icon: SiLaravel, href: 'https://laravel.com/' },
-                        { name: 'Tailwind CSS', Icon: SiTailwindcss, href: 'https://tailwindcss.com/' },
-                        { name: 'SQL Server', Icon: BsMicrosoft, href: 'https://www.microsoft.com/en-us/sql-server' },
-                        { name: 'TypeScript', Icon: SiTypescript, href: 'https://www.typescriptlang.org/' },
-                        { name: 'shadcn/ui', Icon: SiShadcnui, href: 'https://ui.shadcn.com/' },
-                        { name: 'InertiaJS', Icon: SiInertia, href: 'https://inertiajs.com/' },
-                        { name: 'GitHub', Icon: SiGithub, href: 'https://github.com/' },
-                    ].map(({ name, Icon, href }) => (
-                        <motion.a
-                            key={name}
-                            href={href}
-                            target="_blank"
-                            title={name}
-                            rel="noopener noreferrer"
-                            className="group bg-muted/20 flex h-18 w-18 items-center justify-center rounded-md border border-lime-700/30 text-lime-700 transition-all duration-300 ease-out hover:border-lime-500/60 hover:shadow-[0_0_25px_-5px_rgba(163,230,53,0.5)] md:h-24 md:w-24 dark:text-lime-500"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <Icon className="size-8 transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.8)] md:size-12" />
-                        </motion.a>
-                    ))}
+                <div className="flex flex-col items-center space-y-2">
+                    <TechIcons />
+                    <p className="text-muted-foreground mx-auto mt-6 max-w-3xl text-center text-lg">
+                        and still learning more...
+                    </p>
                 </div>
             </GlassCard>
         </motion.section>
