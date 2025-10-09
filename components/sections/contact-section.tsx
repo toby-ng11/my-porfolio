@@ -16,11 +16,15 @@ export default function ContactSection() {
             variants={fadeUp}
         >
             <SectionTitle>Get In Touch</SectionTitle>
-            <GlassCard>
+            <GlassCard className="space-y-8">
                 <p className="text-muted-foreground text-lg">
                     I&apos;m always open to discussing new opportunities, collaborations, or side projects.
                 </p>
-                <Button asChild size="lg" className="rounded-2xl px-8 py-5">
+                <Button
+                    asChild
+                    size="lg"
+                    className="rounded-2xl px-6 py-5 text-base font-semibold hover:bg-linear-to-r hover:from-emerald-700 hover:to-lime-700 dark:from-lime-500 dark:to-yellow-500"
+                >
                     <Link href="mailto:tobynguyen.dev@gmail.com">Say Hello 👋</Link>
                 </Button>
             </GlassCard>

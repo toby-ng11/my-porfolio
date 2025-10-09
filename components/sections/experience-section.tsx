@@ -15,17 +15,17 @@ export function ExperienceSection() {
         >
             <SectionTitle>Experience</SectionTitle>
             <GlassCard>
-                <div className="mx-auto flex max-w-3xl flex-col gap-6">
+                <div className="flex max-w-3xl flex-col gap-8">
                     {[
                         {
-                            title: 'IT Analyst - Current Company',
-                            time: '2022 - Present',
-                            desc: 'Building and maintaining enterprise systems, implementing new features, and optimizing database performance.',
+                            title: 'Full-stack Web Developer - Centura',
+                            time: 'Sep 2023 - Sep 2025',
+                            desc: 'Building and maintaining enterprise systems (P2Q), implementing new features, and optimizing database performance.',
                         },
                         {
-                            title: 'Software Developer - Freelance',
-                            time: '2020 - 2022',
-                            desc: 'Delivered full-stack web apps using Laravel and React for small business clients.',
+                            title: 'Junior Web Developer - Humber College',
+                            time: 'April 2022 - Sep 2023',
+                            desc: 'Maintained and extended internal applications such as the student information portal and faculty scheduling system, ensuring stability and adding requested features using PHP, JavaScript, and SQL Server.',
                         },
                     ].map((exp) => (
                         <motion.div

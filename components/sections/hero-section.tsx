@@ -32,8 +32,11 @@ export default function HeroSection() {
                 </motion.p>
 
                 <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4 lg:justify-start">
-                    <Button asChild className="rounded-2xl px-6 py-5 text-base font-semibold">
-                        <Link href="/contact">Contact Me</Link>
+                    <Button
+                        asChild
+                        className="rounded-2xl px-6 py-5 text-base font-semibold transition duration-300 ease-in-out hover:bg-linear-to-r hover:from-emerald-700 hover:to-lime-700 dark:hover:from-emerald-500 dark:hover:to-lime-500"
+                    >
+                        <Link href="mailto:tobynguyen.dev@gmail.com">Contact Me</Link>
                     </Button>
                     {[
                         { href: 'https://instagram.com/nmtoby.11', Icon: SiInstagram, title: 'Instagram' },
